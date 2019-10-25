@@ -1,0 +1,12 @@
+{  
+   "name":"elasticsearch-sink",
+   "config":{  
+      "connector.class":"io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+      "tasks.max":"1",
+      "topics":"log-messages",
+      "key.ignore":"true",
+      "schema.ignore": "true",
+      "connection.url": "http://elasticsearch-agile-one:9200",
+      "type.name": "kafka-connect"
+   }
+}
