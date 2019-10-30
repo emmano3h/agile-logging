@@ -141,7 +141,18 @@ services:
       networks:
         - agile-network
 
+    python-app-test:
+      container_name: python-app-test
+      build:
+        context: ./
+        dockerfile: Dockerfile-python-app-test.yaml
+      ports:
+        - "7500:611"
+      volumes:
+        - ./python-app-test/:/usr/src/app
+        - ../agilecx-data/logs/:/usr/src/logs
+      networks:
+      - agile-network
 networks:
   agile-network:
-    external: true
 
