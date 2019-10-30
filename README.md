@@ -2,7 +2,7 @@
 
 AgileLogging is a practical streaming data infrastructure case.
 
-### What is this repository for? ###
+### About ###
 
 This repo is a stack to have running :
 1. [Fluentd](https://https://www.fluentd.org/) : An open source data collector for unified logging layer. I used a connector (@type kafka2) to send logs in Kafka.
@@ -14,7 +14,7 @@ This repo is a stack to have running :
 7. [Kibana](https://www.elastic.co/) : UI to connect and view data or logs stored in Elasticsearch.
 8. python-app-test : A Python application to test the logs streaming.
 
-### How do I get set up? ###
+### How do you get set up? ###
 * Dependencies
    - Docker
 
