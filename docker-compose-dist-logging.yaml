@@ -109,6 +109,10 @@ services:
       restart: always
       environment:
         - node.name=elasticsearch-agile-one
+        - transport.host=localhost
+        - transport.tcp.port=9300
+        - http.port=9200
+        - network.host=0.0.0.0
         - cluster.name=docker-agile-cluster
         - bootstrap.memory_lock=true
         - http.cors.enabled=true
@@ -123,8 +127,8 @@ services:
           soft: -1
           hard: -1
       volumes:
-        - ../elasticsearch-data/elk-one/logs:/var/log
-        - ../elasticsearch-data/elk-one/data:/usr/share/elasticsearch/data
+        - ./elasticsearch-data/elk-one/logs:/var/log
+        - ./elasticsearch-data/elk-one/data:/usr/share/elasticsearch/data
       networks:
         - agile-network
       ports:
